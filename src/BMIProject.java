@@ -24,6 +24,9 @@ public class BMIProject {
         
         convertedHeight = personsHeight * heightModifier;
         convertedWeight = personsWeight * weightModifier;
+        personsBMI = (convertedHeight/convertedWeight)/convertedWeight;
+        
+        System.out.println("Thank you for the information! I calculated your BMI to be " + personsBMI + ".");
 
 
 
