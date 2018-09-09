@@ -34,26 +34,27 @@ public class BMIProject {
         personsWeight = Integer.parseInt(personsWeightPounds);
         personsWeightConverted = (personsWeight*0.453592);
         personsBMI = (personsWeightConverted/personsHeightConverted)/personsHeightConverted;
+        double roundOffBMI = Math.round(personsBMI * 100.0) / 100.0;
 
         System.out.println("Name: " + personsName);
         System.out.println("Height: " + personsHeightFeet + "'" + personsHeightInches + "\"");
         System.out.println("Weight: " + personsWeightPounds);
-        System.out.println("BMI: " + personsBMI);
+        System.out.println("BMI: " + roundOffBMI);
 
-        if(personsBMI < 18.5){
+        if(roundOffBMI < 18.5){
             System.out.println("Group: Underweight");
         }
-        if(personsBMI > 18.5) {
-            if (personsBMI < 24.9) {
+        if(roundOffBMI > 18.5) {
+            if (roundOffBMI < 24.9) {
                 System.out.println("Group: Healthy");
             }
         }
-        if(personsBMI > 25) {
-            if (personsBMI < 29.9) {
+        if(roundOffBMI > 25) {
+            if (roundOffBMI < 29.9) {
                 System.out.println("Group: Overweight");
             }
         }
-        if(personsBMI > 30){
+        if(roundOffBMI > 30){
             System.out.println("Group: Obese");
         }
 
