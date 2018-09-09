@@ -36,6 +36,15 @@ public class BMIProject {
         personsBMI = (personsWeightConverted/personsHeightConverted)/personsHeightConverted;
         double roundOffBMI = Math.round(personsBMI * 100.0) / 100.0;
 
+        System.out.println("BMI Groups");
+        System.out.println("Underweight: Your BMI is less than 18.5");
+        System.out.println("Healthy weight: Your BMI is 18.5 to 24.9");
+        System.out.println("Overweight: Your BMI is 25 to 29.9");
+        System.out.println("Obese: Your BMI is 30 or higher");
+
+        System.out.println(" ");
+        System.out.println(" ");
+
         System.out.println("Name: " + personsName);
         System.out.println("Height: " + personsHeightFeet + "'" + personsHeightInches + "\"");
         System.out.println("Weight: " + personsWeightPounds);
@@ -57,14 +66,5 @@ public class BMIProject {
         if(roundOffBMI > 30){
             System.out.println("Group: Obese");
         }
-
-        System.out.println(" ");
-        System.out.println(" ");
-
-        System.out.println("BMI Groups");
-        System.out.println("Underweight: Your BMI is less than 18.5");
-        System.out.println("Healthy weight: Your BMI is 18.5 to 24.9");
-        System.out.println("Overweight: Your BMI is 25 to 29.9");
-        System.out.println("Obese: Your BMI is 30 or higher");
     }
 }
