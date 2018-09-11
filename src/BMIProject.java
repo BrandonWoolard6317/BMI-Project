@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class BMIProject {
     public static void main(String[] args) {
+        //Declaring Variables
         String personsName;
         String personsHeightInches;
         String personsHeightFeet;
@@ -14,9 +15,9 @@ public class BMIProject {
         double personsHeightConverted;
         double personsWeightConverted;
         double personsBMI;
-
         Scanner keyboard = new Scanner(System.in);
 
+        //Grabbing Users Input
         System.out.println("Hello this is my BMI Calculator! Lets start off with your name.");
         personsName = keyboard.nextLine();
         System.out.println("Hi " + personsName + "! What is your height in feet?");
@@ -26,6 +27,7 @@ public class BMIProject {
         System.out.println("My last question, if you don't mind me asking what's your weight in pounds?");
         personsWeightPounds = keyboard.nextLine();
 
+        //Combining information
         personsHeightFeetCombine = Integer.parseInt(personsHeightFeet);
         personsHeightInchesCombine = Integer.parseInt(personsHeightInches);
         personsHeightCombined = personsHeightInchesCombine + (personsHeightFeetCombine * 12);
@@ -36,11 +38,13 @@ public class BMIProject {
         personsBMI = (personsWeightConverted/personsHeightConverted)/personsHeightConverted;
         double roundOffBMI = Math.round(personsBMI * 100.0) / 100.0;
 
+        //Displaying information
         System.out.println("Name: " + personsName);
         System.out.println("Height: " + personsHeightFeet + "'" + personsHeightInches + "\"");
         System.out.println("Weight: " + personsWeightPounds);
         System.out.println("BMI: " + roundOffBMI);
 
+        //BMI Group Identifier
         if(roundOffBMI < 18.5){
             System.out.println("Group: Underweight");
         }
@@ -61,6 +65,7 @@ public class BMIProject {
         System.out.println(" ");
         System.out.println(" ");
 
+        //BMI Groups
         System.out.println("BMI Groups");
         System.out.println("Underweight: Your BMI is less than 18.5");
         System.out.println("Healthy weight: Your BMI is 18.5 to 24.9");
